@@ -19,7 +19,6 @@ class DeserializeFromJson{
         ObjectMapper objectMapper = new ObjectMapper();
         String json = "{ \"widgetType\" : \"topper\", \"guid\" : \"321\" }";
 
-
         try {
             Widget widget = objectMapper.readValue(json, Widget.class);
             System.out.println("Resulting Java Object -> WidgetType: " + widget.getWidgetType() + " Guid: " + widget.getGuid());
